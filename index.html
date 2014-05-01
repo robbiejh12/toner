@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Toner</title>
+<link rel="stylesheet" href="toner.css" />
+<script type="text/javascript" src="toner.js"></script>
+</head>
+<body onLoad="init();">
+<div class="page-wrapper">
+	<div class="header">
+		<span>
+			<img id="logo" src="images/headphones.png" />
+		</span>
+		<span class="title">
+			<h1>Toner</h1>
+		</span>
+	</div>
+	<div class="center-bar">
+		<h3>What frequency is this tone?</h3>
+		<div class="audio-wrapper">
+		<img id="audiobutton" src="images/play.png" onClick="audioPlay();">
+		<audio preload id="audio" source src="audio/default.mp3"></audio></img>
+		</div>
+		<div class="overlay-wrapper" id="overlay-wrapper">
+			<span id="overlay-message" onClick="nextQuestion();">Start new game!</span>
+		</div>
+		<div class="answer-wrapper" id="answer-wrapper">
+			<div class="answer-nums">
+				1&#41;<br>
+				2&#41;<br>
+				3&#41;<br>
+				4&#41;
+			</div>
+			<div class="answer-values">
+				<span class="ans-value" id="ans-value0"></span><br>
+				<span class="ans-value" id="ans-value1"></span><br>
+				<span class="ans-value" id="ans-value2"></span><br>
+				<span class="ans-value" id="ans-value3"></span>
+			</div>
+			<div class="answer-radios">
+				<input name="ans-radio" type="radio" id="ans-radio0"></input><br>
+				<input name="ans-radio" type="radio" id="ans-radio1"></input><br>
+				<input name="ans-radio" type="radio" id="ans-radio2"></input><br>
+				<input name="ans-radio" type="radio" id="ans-radio3"></input>
+			</div>
+		</div>
+	</div>
+	<div class="under-bar">
+	<div class="center-bar">
+		<div class="button-wrapper" id="button-wrapper">
+			<button onClick="submit();" id="submit">Submit</button>
+			<button onClick="nextQuestion();" id='continue'>Continue</button>
+		</div>
+		<div class="score-wrapper" id="score-wrapper">
+			Score:<span id="score">0</span>/<span id="outof">0</span>
+		</div>
+	</div>
+	</div>
+	<div class="footer">
+		<h2>This website was designed and built by Robbie Hayward.</h2>
+	</div>
+</div>
+</body>
+</html>
