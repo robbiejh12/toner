@@ -115,8 +115,10 @@ vertical-align:middle;
 span{
 position:relative;
 }
-#overlay-message{
+.overlay{
 display:inline-block;
+position:absolute;
+left:10%;
 line-height:100px;
 width:80%;
 border:solid;
@@ -131,6 +133,9 @@ text-align:center;
 vertical-align:middle;
 opacity:1;
 transition:opacity 1.5s;
+}
+#overlay-correct{
+opacity:0;
 }
 .title{
 position:absolute;

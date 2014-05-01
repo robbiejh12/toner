@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="toner.css" />
 <script type="text/javascript" src="toner.js"></script>
 </head>
-<body onLoad="init();">
+<body onLoad="init(true);">
 <div class="page-wrapper">
 	<div class="header">
 		<span>
@@ -23,7 +23,8 @@
 		<audio preload id="audio" source src="audio/default.mp3"></audio></img>
 		</div>
 		<div class="overlay-wrapper" id="overlay-wrapper">
-			<span id="overlay-message" onClick="nextQuestion();">Start new game!</span>
+			<span class="overlay" id="overlay-start" onClick="startGame();">Start new game!</span>
+			<span class="overlay" id="overlay-correct" onClick="resetOverlay('correct');"></span>
 		</div>
 		<div class="answer-wrapper" id="answer-wrapper">
 			<div class="answer-nums">
@@ -50,7 +51,7 @@
 	<div class="center-bar">
 		<div class="button-wrapper" id="button-wrapper">
 			<button onClick="submit();" id="submit">Submit</button>
-			<button onClick="nextQuestion();" id='continue'>Continue</button>
+			<button onClick="whatNext();" id='continue'>Continue</button>
 		</div>
 		<div class="score-wrapper" id="score-wrapper">
 			Score:<span id="score">0</span>/<span id="outof">0</span>
